@@ -84,7 +84,7 @@ def main():
     
     Rproduct, Rreview, score = recommendations(Product)
 
-    st.write(score)
+    st.write(score.iloc[1:11].index)
   
     Rprint = pd.DataFrame(({'Product': Rproduct,'Review': Rreview}))
 

@@ -82,7 +82,11 @@ def main():
             recommendedProductsreview.append(list(Data.review_text)[i])
         return recommendedProducts, recommendedProductsreview
     
-    st.table(recommendations(Product))  
+    Rproduct, Rreview = recommendations(Product)
+
+    Rprint = pd.dataframe({'Product': Rproduct,'Review': Rreview})
+
+    st.table(Rprint)
             
 
 if __name__ == "__main__":

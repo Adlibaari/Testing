@@ -80,11 +80,11 @@ def main():
         for i in top_10:
             recommendedProducts.append(list(Data.index)[i])
             recommendedProductsreview.append(list(Data.review_text)[i])
-        return recommendedProducts, recommendedProductsreview, score
+        return recommendedProducts, recommendedProductsreview, top_10
     
-    Rproduct, Rreview, score = recommendations(Product)
+    Rproduct, Rreview, top_10 = recommendations(Product)
 
-    st.write(score)
+    st.write(top_10)
   
     Rprint = pd.DataFrame(({'Product': Rproduct,'Review': Rreview}))
 

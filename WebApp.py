@@ -60,7 +60,7 @@ def main():
     filtered_data = filtered_data.loc[filtered_data.skin_type == Type]
     
     Product = st.selectbox('Product Name', filtered_data['product_name'].unique())
-    st.write(Product.review_text)
+    st.write(filtered_data.iloc[filtered_data.product_name == Product])
     
     Data['review_clean'] = Data['review_text'].apply(clean_text)
 

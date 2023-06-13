@@ -82,7 +82,7 @@ def main():
             recommendedProductsreview.append(list(Data.review_text)[i])
         return recommendedProducts, recommendedProductsreview
     
-    st.write(recommendations(Product))  
+    st.table(recommendations(Product))  
             
 
 if __name__ == "__main__":

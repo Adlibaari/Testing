@@ -71,16 +71,16 @@ def main():
     
     indices = pd.Series(Data.index)
     
-    def recommendations(name, cos_sim = cos_sim):
-        recommendedProducts = []
-        idx =indices[indices == name].index[0]
-        score = pd.Series(cos_sim[idx]).sort_values(ascending = False)
-        top_10 = list(score.iloc[1:11].index)
-        for i in top_10:
-            recommendedProducts.append(list(data.index)[i])
-        return recommendedProducts
+    # def recommendations(name, cos_sim = cos_sim):
+    #     recommendedProducts = []
+    #     idx =indices[indices == name].index[0]
+    #     score = pd.Series(cos_sim[idx]).sort_values(ascending = False)
+    #     top_10 = list(score.iloc[1:11].index)
+    #     for i in top_10:
+    #         recommendedProducts.append(list(data.index)[i])
+    #     return recommendedProducts
     
-    st.write(recommendations(Product))  
+    # st.write(recommendations(Product))  
             
 
 if __name__ == "__main__":

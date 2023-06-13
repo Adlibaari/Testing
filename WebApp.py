@@ -62,14 +62,14 @@ def main():
     Product = st.selectbox('Product Name', filtered_data['product_name'].unique())
     st.write(Product)
     
-    Data['review_clean'] = Data['review_text'].apply(clean_text)
+    # Data['review_clean'] = Data['review_text'].apply(clean_text)
 
-    Data.set_index('product_name', inplace=True)
-    tf = TfidfVectorizer(analyzer='word', ngram_range=(1, 3), min_df=0, stop_words='english')
-    tfidf_matrix = tf.fit_transform(Data['review_clean'])
-    cos_sim = cosine_similarity(tfidf_matrix, tfidf_matrix)
+    # Data.set_index('product_name', inplace=True)
+    # tf = TfidfVectorizer(analyzer='word', ngram_range=(1, 3), min_df=0, stop_words='english')
+    # tfidf_matrix = tf.fit_transform(Data['review_clean'])
+    # cos_sim = cosine_similarity(tfidf_matrix, tfidf_matrix)
     
-    indices = pd.Series(Data.index)
+    # indices = pd.Series(Data.index)
     
     # def recommendations(name, cos_sim = cos_sim):
     #     recommendedProducts = []

@@ -83,10 +83,8 @@ def main():
         return recommendedProducts, recommendedProductsreview, score
     
     Rproduct, Rreview, score = recommendations(Product)
-
-    st.write(score.iloc[1:11])
   
-    Rprint = pd.DataFrame(({'Product': Rproduct,'Review': Rreview}))
+    Rprint = pd.DataFrame(({'Product': Rproduct,'Review': Rreview, 'Similarity Score':list(score.iloc[1:11])}))
 
     st.table(Rprint)
             
